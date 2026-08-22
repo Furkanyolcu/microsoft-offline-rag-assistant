@@ -1092,7 +1092,7 @@ def models_api():
     try:
         from foundry_local_sdk import FoundryLocalManager, Configuration
         if not FoundryLocalManager.instance:
-            FoundryLocalManager.initialize(Configuration(app_name="EchoLocal"))
+            FoundryLocalManager.initialize(Configuration(app_name="NovaRAG"))
         mgr = FoundryLocalManager.instance
         
         models_info = []
