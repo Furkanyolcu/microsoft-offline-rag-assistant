@@ -24,7 +24,7 @@ HTML_TEMPLATE = r"""
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Offline RAG Assistant</title>
+    <title>EchoLocal</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -745,7 +745,7 @@ HTML_TEMPLATE = r"""
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="brand">
-            <div class="brand-title" style="font-size: 1.8rem; margin: 0 auto; text-align: center; width: 100%;">Offline RAG</div>
+            <div class="brand-title" style="font-size: 1.8rem; margin: 0 auto; text-align: center; width: 100%;">EchoLocal</div>
         </div>
         <div class="status-pill">
             <div class="pulse-dot"></div>
@@ -1092,7 +1092,7 @@ def models_api():
     try:
         from foundry_local_sdk import FoundryLocalManager, Configuration
         if not FoundryLocalManager.instance:
-            FoundryLocalManager.initialize(Configuration(app_name="OfflineRAG"))
+            FoundryLocalManager.initialize(Configuration(app_name="EchoLocal"))
         mgr = FoundryLocalManager.instance
         
         models_info = []

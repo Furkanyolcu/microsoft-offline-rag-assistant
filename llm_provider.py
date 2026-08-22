@@ -25,7 +25,7 @@ class FoundryLocalProvider(BaseLLMProvider):
         try:
             from foundry_local_sdk import FoundryLocalManager, Configuration
             if not FoundryLocalManager.instance:
-                FoundryLocalManager.initialize(Configuration(app_name="OfflineRAG"))
+                FoundryLocalManager.initialize(Configuration(app_name="EchoLocal"))
             self._mgr = FoundryLocalManager.instance
             
             self._model = self._mgr.catalog.get_model(self.model_name)
