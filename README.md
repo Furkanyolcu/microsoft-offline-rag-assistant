@@ -1,9 +1,9 @@
-﻿# NovaRAG 🚀
+# Offline RAG Assistant 🚀
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Microsoft Foundry Local](https://img.shields.io/badge/AI-Microsoft%20Foundry%20Local-0078D4.svg)](https://github.com/microsoft/foundry-local)
 
-NovaRAG is a **100% offline**, privacy-first Retrieval-Augmented Generation (RAG) assistant. It allows you to query your private documents locally without sending any data to cloud APIs.
+Offline RAG Assistant is a **100% offline**, privacy-first Retrieval-Augmented Generation (RAG) assistant. It allows you to query your private documents locally without sending any data to cloud APIs.
 
 ## 🌟 Key Features
 - **Total Privacy**: Runs entirely on your local machine using **Microsoft Foundry Local**.
