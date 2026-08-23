@@ -40,8 +40,11 @@ def test_embedding_generator():
 def test_full_rag_pipeline(tmp_path):
     db_file = tmp_path / "test_rag.db"
     db = VectorDatabase(db_path=db_file)
-    docs_dir = Path(__file__).parent / "data" / "sample_documents"
-    ingest_result = run_ingestion(docs_dir=docs_dir, db=db)
+    test_doc_dir = tmp_path / "docs"
+    test_doc_dir.mkdir(exist_ok=True)
+    sample_file = test_doc_dir / "cs101.md"
+    sample_file.write_text("# CS101 Course\n\nGrading policy: Phase 1 is 40%, Phase 2 is 60%.", encoding="utf-8")
+    ingest_result = run_ingestion(docs_dir=test_doc_dir, db=db)
     assert ingest_result["processed_documents"] > 0
     retriever = Retriever(db=db)
     llm = OfflineFallbackProvider()

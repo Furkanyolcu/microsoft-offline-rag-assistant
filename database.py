@@ -2,7 +2,7 @@ import sqlite3
 import json
 import math
 from pathlib import Path
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 from config import config
 def cosine_similarity(vec1: List[float], vec2: List[float]) -> float:
     if not vec1 or not vec2 or len(vec1) != len(vec2):
@@ -14,7 +14,7 @@ def cosine_similarity(vec1: List[float], vec2: List[float]) -> float:
         return 0.0
     return float(dot / (norm1 * norm2))
 class VectorDatabase:
-    def __init__(self, db_path: Path = None):
+    def __init__(self, db_path: Optional[Path] = None):
         self.db_path = db_path or config.db_path
         self.init_db()
     def get_connection(self) -> sqlite3.Connection:

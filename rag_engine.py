@@ -28,8 +28,8 @@ class RAGEngine:
     def ask(
         self,
         question: str,
-        top_k: int = None,
-        similarity_threshold: float = None
+        top_k: Optional[int] = None,
+        similarity_threshold: Optional[float] = None
     ) -> RAGResponse:
         start_time = time.time()
         top_k = top_k or config.top_k

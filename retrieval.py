@@ -1,12 +1,12 @@
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 from config import config
 from database import VectorDatabase, cosine_similarity
 from ingest import EmbeddingGenerator
 class Retriever:
-    def __init__(self, db: VectorDatabase = None, embedder: EmbeddingGenerator = None):
+    def __init__(self, db: Optional[VectorDatabase] = None, embedder: Optional[EmbeddingGenerator] = None):
         self.db = db or VectorDatabase()
         self.embedder = embedder or EmbeddingGenerator()
-    def get_top_chunks(self, query: str, top_k: int = None, threshold: float = None) -> List[Dict[str, Any]]:
+    def get_top_chunks(self, query: str, top_k: Optional[int] = None, threshold: Optional[float] = None) -> List[Dict[str, Any]]:
         top_k = top_k or config.top_k
         threshold = threshold or config.similarity_threshold
         query_vector = self.embedder.embed_text(query)

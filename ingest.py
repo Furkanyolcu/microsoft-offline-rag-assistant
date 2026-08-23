@@ -3,11 +3,11 @@ import re
 import math
 import zlib
 from pathlib import Path
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 from config import config
 from database import VectorDatabase
 class EmbeddingGenerator:
-    def __init__(self, dim: int = None):
+    def __init__(self, dim: Optional[int] = None):
         self.dim = dim or config.embedding_dim
         self._transformer_model = None
         self._init_model()
@@ -60,7 +60,7 @@ def extract_text_from_pdf(file_path: Path) -> str:
             if len(s) > 2 and not s.startswith('/'):
                 extracted.append(s)
         return "\n".join(extracted) if extracted else ""
-def chunk_text(text: str, chunk_size: int = None, chunk_overlap: int = None) -> List[str]:
+def chunk_text(text: str, chunk_size: Optional[int] = None, chunk_overlap: Optional[int] = None) -> List[str]:
     chunk_size = chunk_size or config.chunk_size
     chunk_overlap = chunk_overlap or config.chunk_overlap
     paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
@@ -91,7 +91,7 @@ def chunk_text(text: str, chunk_size: int = None, chunk_overlap: int = None) -> 
     if current_chunk:
         chunks.append(current_chunk)
     return chunks if chunks else [text]
-def run_ingestion(docs_dir: Path = None, db: VectorDatabase = None) -> Dict[str, Any]:
+def run_ingestion(docs_dir: Optional[Path] = None, db: Optional[VectorDatabase] = None) -> Dict[str, Any]:
     docs_dir = docs_dir or config.docs_dir
     db = db or VectorDatabase()
     embedder = EmbeddingGenerator()
