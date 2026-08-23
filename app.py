@@ -830,10 +830,10 @@ HTML_TEMPLATE = r"""
         </div>
         <!-- Quick Suggestion Chips -->
         <div class="prompt-chips">
-            <div class="chip" onclick="usePrompt('What is Microsoft Foundry Local?')">⚡ What is Microsoft Foundry Local?</div>
-            <div class="chip" onclick="usePrompt('How does cosine similarity work in RAG?')">📐 How cosine similarity works</div>
-            <div class="chip" onclick="usePrompt('What are the CS101 grading policies?')">📚 CS101 Grading Policies</div>
-            <div class="chip" onclick="usePrompt('What are Python clean code best practices?')">🐍 Python Clean Code</div>
+            <div class="chip" onclick="usePrompt('What does Global Maritime Law govern?')">🚢 Global Maritime Law</div>
+            <div class="chip" onclick="usePrompt('How is Artificial Intelligence used in Healthcare?')">🏥 AI in Healthcare</div>
+            <div class="chip" onclick="usePrompt('What is the SOLAS convention?')">⚓ SOLAS Convention</div>
+            <div class="chip" onclick="usePrompt('What is the General Average?')">⚖️ General Average</div>
         </div>
         <div class="input-bar-container">
             <div class="input-bar">
