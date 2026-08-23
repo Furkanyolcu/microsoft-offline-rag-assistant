@@ -831,9 +831,9 @@ HTML_TEMPLATE = r"""
         <!-- Quick Suggestion Chips -->
         <div class="prompt-chips">
             <div class="chip" onclick="usePrompt('What does Global Maritime Law govern?')">🚢 Global Maritime Law</div>
-            <div class="chip" onclick="usePrompt('How is Artificial Intelligence used in Healthcare?')">🏥 AI in Healthcare</div>
-            <div class="chip" onclick="usePrompt('What is the SOLAS convention?')">⚓ SOLAS Convention</div>
-            <div class="chip" onclick="usePrompt('What is the General Average?')">⚖️ General Average</div>
+            <div class="chip" onclick="usePrompt('What is the General Average concept in maritime law?')">⚖️ General Average Concept</div>
+            <div class="chip" onclick="usePrompt('How is AI used in radiology and medicine?')">🏥 AI in Radiology & Medicine</div>
+            <div class="chip" onclick="usePrompt('Why are local AI models and RAG used in healthcare?')">🔒 Local AI in Healthcare</div>
         </div>
         <div class="input-bar-container">
             <div class="input-bar">

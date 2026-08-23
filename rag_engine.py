@@ -53,10 +53,9 @@ class RAGEngine:
             f"Context Passages:\n{formatted_context}\n\n"
             f"Question: {question}\n\n"
             f"Instructions:\n"
-            f"- Answer the question using ONLY the facts from the Context Passages above.\n"
-            f"- If the answer is not explicitly contained in the Context Passages, you MUST reply exactly with: 'I do not have enough information in the local knowledge base to answer this question.'\n"
-            f"- Do not use any outside knowledge.\n"
-            f"- Include source document citations [Source: filename.md] for your answers."
+            f"- Answer the question directly using facts from the Context Passages above.\n"
+            f"- Include source citations [Source: filename | Section: Chunk #N] for your answer.\n"
+            f"- If the Context Passages contain no relevant information at all, respond with: 'I do not have enough information in the local knowledge base to answer this question.'"
         )
         try:
             answer = self.llm_provider.generate_response(
