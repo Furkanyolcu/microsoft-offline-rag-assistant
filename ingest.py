@@ -13,8 +13,9 @@ class EmbeddingGenerator:
         self._init_model()
     def _init_model(self):
         try:
-            from sentence_transformers import SentenceTransformer
-            self._transformer_model = SentenceTransformer('all-MiniLM-L6-v2')
+            import importlib
+            st = importlib.import_module("sentence_transformers")
+            self._transformer_model = getattr(st, "SentenceTransformer")("all-MiniLM-L6-v2")
             self.dim = 384
         except Exception:
             self._transformer_model = None

@@ -75,8 +75,4 @@ def run_standalone_tests():
         gc.collect()
     print("\n[SUCCESS] ALL TESTS PASSED SUCCESSFULLY!")
 if __name__ == "__main__":
-    try:
-        import pytest
-        sys.exit(pytest.main(["-v", __file__]))
-    except ImportError:
-        run_standalone_tests()
+    run_standalone_tests()
