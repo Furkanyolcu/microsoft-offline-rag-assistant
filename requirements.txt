@@ -6,3 +6,6 @@ pytest>=7.0.0
 # Optional / Pluggable dependencies:
 foundry-local-sdk
 # sentence-transformers (for local embedding model fine-tuning)
+
+pypdf>=3.0.0
+flask>=3.0.0
