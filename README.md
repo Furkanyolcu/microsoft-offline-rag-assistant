@@ -1,4 +1,5 @@
-# EchoLocal 🚀
+# EchoLocal 
+<img width="1919" height="864" alt="Ekran görüntüsü 2026-08-23 010823" src="https://github.com/user-attachments/assets/7dfa9111-9d35-4db8-9265-b7d2b9a98c04" />
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Microsoft Foundry Local](https://img.shields.io/badge/AI-Microsoft%20Foundry%20Local-0078D4.svg)](https://github.com/microsoft/foundry-local)
